@@ -9,8 +9,8 @@ from nltk.stem import PorterStemmer
 app = Flask(__name__)
 
 # Load model and vectorizer
-model = joblib.load('fake_job_model.pkl')
-vectorizer = joblib.load('tfidf_vectorizer.pkl')
+model = joblib.load('fake_jobposting_model.pkl')
+vectorizer = joblib.load('tfidf_vectorizerr.pkl')
 
 # Load NLTK resources
 nltk.download('stopwords')
