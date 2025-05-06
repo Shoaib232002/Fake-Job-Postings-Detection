@@ -10,12 +10,13 @@
 
   <style>
     body {
-      background: #f8f9fa;
+      background: #b8bbbf;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 40px;
+      flex-direction: column;
     }
 
     .card {
@@ -39,11 +40,21 @@
       color: #888;
       margin-top: 30px;
     }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .carousel-item {
+      min-height: 180px;
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="container mb-4">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-6">
         <div class="card p-4">
@@ -67,14 +78,69 @@
             {% endif %}
           </div>
         </div>
-        <div class="footer mt-4">
-          &copy; 2025 Fake Job Detector AI. All rights reserved.
+      </div>
+    </div>
+
+    <!-- Carousel for Examples -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-10">
+        <div id="exampleCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="carousel-caption">
+                  <h5>✅ Real Example</h5>
+                  <p>We are looking for a Frontend Developer with 3+ years of experience in React.js and a strong understanding of responsive design.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="carousel-caption">
+                  <h5>❌ Fake Example</h5>
+                  <p>Urgent work-from-home job! Earn ₹25,000 weekly just by typing. No skills needed. WhatsApp HR immediately: 1234567890.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="carousel-caption">
+                  <h5>✅ Real Example</h5>
+                  <p>Join our marketing team at ABC Corp as a Digital Marketing Analyst. Must have Google Ads and SEO experience.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="carousel-caption">
+                  <h5>❌ Fake Example</h5>
+                  <p>Our company is seeking Receptionist/ Administrative Assistant to monitor multi-line phones, greet visitors, and assist with various clerical duties as needed. Must possess a professional demeanor and basic computer skills, including Word, Excel and Outlook. This is a full-time position with an excellent benefits package, including 401(k)</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#exampleCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#exampleCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <div class="footer mt-5">
+      &copy; 2025 Fake Job Detector AI. All rights reserved.
+    </div>
   </div>
 
-  <!-- JavaScript to Clear Text and Result -->
+  <!-- JavaScript -->
   <script>
     function clearForm() {
       document.getElementById("job_text").value = "";
